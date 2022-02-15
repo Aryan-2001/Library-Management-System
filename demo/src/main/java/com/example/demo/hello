@@ -1,0 +1,7 @@
+
+ConnectionString connectionString = new ConnectionString("mongodb+srv://Aryan2001:<password>@cluster0.mxs0o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+MongoClientSettings settings = MongoClientSettings.builder()
+        .applyConnectionString(connectionString)
+        .build();
+MongoClient mongoClient = MongoClients.create(settings);
+MongoDatabase database = mongoClient.getDatabase("test");
